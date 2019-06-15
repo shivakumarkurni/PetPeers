@@ -25,6 +25,9 @@ public class Pets {
 	@Column(name = "PET_PLACE")
 	private String petPlace;
 
+	@Column(name = "STATUS")
+	private String status;
+
 	@ManyToOne
 	PetUser petUser;
 
@@ -66,6 +69,15 @@ public class Pets {
 
 	public void setPetUser(PetUser petUser) {
 		this.petUser = petUser;
+	}
+
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 	@Override
